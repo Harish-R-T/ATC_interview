@@ -1,0 +1,26 @@
+resource_group_name              = "aks-westus-test-rg"
+location                         = "westus"
+vnet_name                        = "aks-westus-test-vnet"
+vnet_address_space               = "10.0.0.0/24"
+subnet_name                      = "aks-subnet"
+subnet_address_prefix            = "10.0.1.0/24"
+cluster_name                     = "aks-westus-test"
+kubernetes_version               = "1.29.9"
+node_pool_name                   = "atcnodepool"
+node_count                       = 1
+node_vm_size                    = "Standard_DS2_v2"
+network_plugin                   = "kubenet"
+serviceCidr                      = "172.17.0.0/16"
+dnsServiceIP                     = "172.201.0.10"
+podCidr                          = "172.16.0.0/16"
+custom_vnet                      = true
+enable_aad                       = true
+enableAzureRBAC                  = true
+AksDisableLocalAccounts          = true
+enableTelemetry                  = false
+ingressApplicationGateway        = true
+vnetAppGatewaySubnetAddressPrefix = "10.0.1.0/24"
+appGWcount                       = 0
+appGWsku                         = "Standard_v2"
+appGWmaxCount                    = 3
+
